@@ -60,7 +60,7 @@ export const Experience = () => {
       <div className="code">
         <Space direction="vertical" size="middle">
           <BsCodeSlash color="white" size={25} />
-          <h2>Front end Developer</h2>
+          <h2>Front End Developer</h2>
           <p>I specialize in Javascript, Typescript, React.Js, Next.Js</p>
         </Space>
       </div>
