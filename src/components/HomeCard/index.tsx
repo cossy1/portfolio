@@ -71,7 +71,7 @@ export const HomeCard = () => {
       <div className="left-side">
         <h2>Hey,</h2>
         <div className="name">
-          I'm <span>Onyekwuo</span>
+          I&apos;m <span>Onyekwuo</span>
         </div>
         <div>Cosmas</div>
         <Space size="small" align="center">
@@ -83,12 +83,14 @@ export const HomeCard = () => {
       </div>
 
       <div className="right-side">
-        <img
+        <Image
           src={
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPaF540chdPfHnqnOm7aBrBLVBCjF-2F3iw&usqp=CAU'
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPaF540chdPfHnqnOm7aBrBLVBCjF-2F3iw&usqp=CAU/"
           }
-          alt='image'
-          style={{objectFit: 'cover', width: '500px', height: '300px'}}
+          alt="image"
+          //  style={{ objectFit: "cover", width: "500px", height: "300px" }}
+          height={300}
+          width={500}
         />
       </div>
     </StyledCard>
