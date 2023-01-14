@@ -60,7 +60,7 @@ const StyledButton = styled.div`
   color: ${ColorConstants.white};
 
   :hover {
-    background: ${ColorConstants.accent};
+    background: ${ColorConstants.darkAccent};
     border: none;
   }
 `;
@@ -77,7 +77,7 @@ export const HomeCard = () => {
         <Space size="small" align="center">
           <p>Frontend Developer</p>
           <StyledDivider type="vertical" />
-          <p>Web Designer</p>
+          <p>Web Developer</p>
         </Space>
         <StyledButton>Hire Me</StyledButton>
       </div>

@@ -2,10 +2,10 @@ import Head from "next/head";
 import styled from "styled-components";
 import { ColorConstants } from "@/styles/colorConstants";
 import {HomeCard} from "@/components/HomeCard";
+import {Experience} from "@/components/Experience";
 
 const Wrapper = styled.div`
   color: ${ColorConstants.accent};
-  display: flex;
 `;
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
       </Head>
       <Wrapper>
           <HomeCard />
+          <Experience />
       </Wrapper>
     </>
   );
