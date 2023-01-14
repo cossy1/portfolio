@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import { ColorConstants } from "@/styles/colorConstants";
+import {HomeCard} from "@/components/HomeCard";
 
 const Wrapper = styled.div`
   color: ${ColorConstants.accent};
@@ -15,7 +16,9 @@ export default function Home() {
         <meta name="description" content="Onyekwuo Cosmas portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Wrapper></Wrapper>
+      <Wrapper>
+          <HomeCard />
+      </Wrapper>
     </>
   );
 }
