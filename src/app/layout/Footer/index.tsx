@@ -11,7 +11,6 @@ const StyledFooter = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  padding: 24px 0;
   color: ${ColorConstants.onSecondary};
   font-size: 16px;
  // text-align: center;
