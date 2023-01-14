@@ -1,13 +1,11 @@
-import Head from 'next/head'
+import Head from "next/head";
 import styled from "styled-components";
-import {ColorConstants} from "@/styles/colorConstants";
-
+import { ColorConstants } from "@/styles/colorConstants";
 
 const Wrapper = styled.div`
   color: ${ColorConstants.accent};
   display: flex;
 `;
-
 
 export default function Home() {
   return (
@@ -17,10 +15,7 @@ export default function Home() {
         <meta name="description" content="Onyekwuo Cosmas portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-        <Wrapper>
-        WELCOME TO NEXT.JS!!!
-        </Wrapper>
-
+      <Wrapper></Wrapper>
     </>
-  )
+  );
 }
