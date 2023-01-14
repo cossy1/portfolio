@@ -3,7 +3,8 @@ import styled from "styled-components";
 import {ColorConstants} from "@/styles/colorConstants";
 
 const StyledContent = styled.div`
-  background: ${ColorConstants.background};
+  background: ${ColorConstants.secondary};
+  min-height: 500px;
 `;
 
 
@@ -13,11 +14,9 @@ interface AppContentProp {
 
 export const AppContent: React.FC<AppContentProp> = ({children}) => {
 
-    console.log({children})
-
     return(
         <StyledContent>
-            This is the CONTENT!!!
+            {children}
         </StyledContent>
     );
 }

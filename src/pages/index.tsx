@@ -4,7 +4,7 @@ import {ColorConstants} from "@/styles/colorConstants";
 
 
 const Wrapper = styled.div`
-  color: ${ColorConstants.secondary};
+  color: ${ColorConstants.accent};
   display: flex;
 `;
 

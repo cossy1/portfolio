@@ -1,24 +1,21 @@
-import { Layout } from 'antd';
-import { ReactNode, useState } from 'react';
-import { AppContent } from './Content';
-import { AppHeader } from './Header';
+import { Layout } from "antd";
+import { ReactNode } from "react";
+import { AppContent } from "./Content";
+import { AppHeader } from "./Header";
+import {AppFooter} from "@/app/layout/Footer";
 
 interface AppLayoutProps {
-    children: ReactNode | ReactNode[];
+  children: ReactNode | ReactNode[];
 }
+
 const AppLayout = (props: AppLayoutProps) => {
-    const { children } = props;
-    const [menuCollapse, setMenuCollapse] = useState<boolean>(false);
-    const onCollapse = () => {
-        setMenuCollapse((prev) => !prev);
-    };
-    return (
-        <Layout>
-            <Layout>
-                <AppHeader />
-                <AppContent>{children}</AppContent>
-            </Layout>
-        </Layout>
-    );
+  const { children } = props;
+  return (
+    <Layout>
+      <AppHeader />
+      <AppContent>{children}</AppContent>
+        <AppFooter />
+    </Layout>
+  );
 };
 export default AppLayout;
