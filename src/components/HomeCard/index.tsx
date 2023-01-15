@@ -18,6 +18,7 @@ const StyledCard = styled.div`
   }
 
   .left-side {
+    width: 50%;
     .name {
       color: ${ColorConstants.darkAccent};
       font-size: 40px;
@@ -38,6 +39,11 @@ const StyledCard = styled.div`
   p {
     font-size: 10px;
     color: ${ColorConstants.onPrimary};
+  }
+
+  .right-side {
+    width: 50%;
+    height: 100%;
   }
 `;
 
@@ -88,8 +94,7 @@ export const HomeCard = () => {
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPaF540chdPfHnqnOm7aBrBLVBCjF-2F3iw&usqp=CAU/"
           }
           alt="image"
-          //  style={{ objectFit: "cover", width: "500px", height: "300px" }}
-          height={300}
+          height={500}
           width={500}
         />
       </div>
