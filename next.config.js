@@ -6,7 +6,11 @@ const nextConfig = {
     externalDir: true,
   },
   images: {
-    domains: ["encrypted-tbn0.gstatic.com"],
+    domains: [
+      "encrypted-tbn0.gstatic.com",
+      "www.google.com",
+      "upload.wikimedia.org",
+    ],
   },
 };
 
