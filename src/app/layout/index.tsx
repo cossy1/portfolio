@@ -2,7 +2,7 @@ import { Layout } from "antd";
 import { ReactNode } from "react";
 import { AppContent } from "./Content";
 import { AppHeader } from "./Header";
-import {AppFooter} from "@/app/layout/Footer";
+import { AppFooter } from "@/app/layout/Footer";
 
 interface AppLayoutProps {
   children: ReactNode | ReactNode[];
@@ -14,7 +14,7 @@ const AppLayout = (props: AppLayoutProps) => {
     <Layout>
       <AppHeader />
       <AppContent>{children}</AppContent>
-        <AppFooter />
+      {/*<AppFooter />*/}
     </Layout>
   );
 };

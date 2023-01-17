@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { ColorConstants } from "@/styles/colorConstants";
 import { Divider, Space } from "antd";
-import Image from "next/image";
 
 const StyledCard = styled.div`
   background: ${ColorConstants.primary};
@@ -10,15 +9,26 @@ const StyledCard = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
 
   h2 {
     color: ${ColorConstants.tertiary};
     font-size: 57px;
   }
+  
+  .custom-img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px !important;
+  }
 
   .left-side {
     width: 50%;
+    margin-right: 10px;
+    padding: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     .name {
       color: ${ColorConstants.darkAccent};
       font-size: 40px;
@@ -28,6 +38,11 @@ const StyledCard = styled.div`
       font-size: 90px;
       font-weight: bold;
       line-height: 64px;
+      
+    }
+    
+    .custom-image{
+     width: 100%;
     }
   }
 
@@ -40,11 +55,51 @@ const StyledCard = styled.div`
     font-size: 10px;
     color: ${ColorConstants.onPrimary};
   }
+  
+  @media(max-width: 768px){
+    flex-direction: column;
+    
+    h2{
+      font-size: 30px;
+    }
+    
+    span{
+      font-size: 40px;
+    }
 
-  .right-side {
-    width: 50%;
-    height: 100%;
+    .left-side {
+      width: 100%;
+      padding: 20px;
+      .name {
+        font-size: 20px;
+      }
+      div {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
   }
+
+  @media (min-width: 770px) and (max-width:1100px) {
+    .left-side {
+      .name {
+        font-size: 16px;
+      }
+      div {
+        font-size: 50px;
+        line-height: 40px;
+      }
+    }
+
+    span {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+    }
 `;
 
 const StyledDivider = styled(Divider)`
@@ -69,6 +124,10 @@ const StyledButton = styled.div`
     background: ${ColorConstants.darkAccent};
     border: none;
   }
+
+  @media (max-width: 550px) {
+    width: 100%;
+  }
 `;
 
 export const HomeCard = () => {
@@ -88,16 +147,13 @@ export const HomeCard = () => {
         <StyledButton>Hire Me</StyledButton>
       </div>
 
-      <div className="right-side">
-        <Image
-          src={
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPaF540chdPfHnqnOm7aBrBLVBCjF-2F3iw&usqp=CAU/"
-          }
-          alt="image"
-          height={500}
-          width={500}
-        />
-      </div>
+      <img
+        src={
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPaF540chdPfHnqnOm7aBrBLVBCjF-2F3iw&usqp=CAU/"
+        }
+        alt="image"
+        className="custom-img"
+      />
     </StyledCard>
   );
 };
