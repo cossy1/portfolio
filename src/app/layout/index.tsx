@@ -14,7 +14,7 @@ const AppLayout = (props: AppLayoutProps) => {
     <Layout>
       <AppHeader />
       <AppContent>{children}</AppContent>
-      {/*<AppFooter />*/}
+      <AppFooter />
     </Layout>
   );
 };
