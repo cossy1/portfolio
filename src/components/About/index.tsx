@@ -17,7 +17,7 @@ const StyledAbout = styled.div`
     display: flex;
     align-items: start;
     justify-content: space-around;
-    gap: 10px;
+    gap: 10px; 
 
     .header {
       color: ${ColorConstants.darkAccent};
@@ -37,12 +37,30 @@ const StyledAbout = styled.div`
       justify-content: space-between;
       gap: 20px;
     }
+    }
   }
 
   span {
     color: ${ColorConstants.tertiary};
     font-size: 16px;
   }
+  
+  @media(max-width: 768px){
+    div {
+     flex-direction: column;
+      justify-content: center;
+      width: 100%;
+
+      .header {
+        font-size: 20px;
+      }
+  }
+    span {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 40px;
+    }
 `;
 
 const StyledDiv = styled.div`
@@ -61,6 +79,13 @@ const StyledDiv = styled.div`
     font-size: 16px;
     color: ${ColorConstants.tertiary};
     line-height: 28px;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 `;
 
