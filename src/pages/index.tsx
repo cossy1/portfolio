@@ -5,6 +5,7 @@ import { HomeCard } from "@/components/HomeCard";
 import { Experience } from "@/components/Experience";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
+import { Projects } from "@/components/Projects";
 
 const Wrapper = styled.div`
   color: ${ColorConstants.accent};
@@ -23,6 +24,7 @@ export default function Home() {
         <Experience />
         <About />
         <Skills />
+        <Projects />
       </Wrapper>
     </>
   );
